@@ -2,7 +2,7 @@
   "name": "commit-after-publish",
   "displayName": "Commit After Publish",
   "description": "Automatically generates commit messages after successful publish tasks",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "publisher": "ngSoftware",
   "engines": {
     "vscode": "^1.80.0"
@@ -34,9 +34,6 @@
         }
       }
     }
-  },
-  "scripts": {
-    "webpack": "webpack --mode=production"
   },
   "devDependencies": {
     "webpack": "^5.98.0",
