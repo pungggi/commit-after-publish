@@ -1,38 +1,45 @@
 {
-    "name": "commit-after-publish",
-    "displayName": "Commit After Publish",
-    "description": "Automatically generates commit messages after successful publish tasks",
-    "version": "0.0.1",
-    "publisher": "ngSoftware",
-    "engines": {
-        "vscode": "^1.80.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onStartupFinished"
-    ],
-    "main": "./src/extension.js",
-    "contributes": {
-        "configuration": {
-            "title": "Commit After Publish",
-            "properties": {
-                "commit-after-publish.enabled": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Enable auto-generation of commit messages after publishing"
-                },
-                "commit-after-publish.taskNames": {
-                    "type": "array",
-                    "default": [
-                        "Afterpublish",
-                        "Run Afterpublish",
-                        "publish"
-                    ],
-                    "description": "Task names that should trigger commit message generation"
-                }
-            }
+  "name": "commit-after-publish",
+  "displayName": "Commit After Publish",
+  "description": "Automatically generates commit messages after successful publish tasks",
+  "version": "0.0.7",
+  "publisher": "ngSoftware",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Commit After Publish",
+      "properties": {
+        "commit-after-publish.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable auto-generation of commit messages after publishing"
+        },
+        "commit-after-publish.taskNames": {
+          "type": "array",
+          "default": [
+            "Afterpublish",
+            "Run Afterpublish",
+            "publish"
+          ],
+          "description": "Task names that should trigger commit message generation"
         }
+      }
     }
+  },
+  "scripts": {
+    "webpack": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
 }
