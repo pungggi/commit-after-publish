@@ -14,5 +14,8 @@ module.exports = {
   },
   resolve: {
     extensions: [".js"],
+    fallback: {
+      debug: false,
+    },
   },
 };
