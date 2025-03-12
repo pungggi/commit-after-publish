@@ -58,11 +58,7 @@ function registerTaskEvents(context) {
                   "github.copilot.git.generateCommitMessage"
                 );
               })
-              .then(() => {
-                vscode.window.showInformationMessage(
-                  "Commit message generated successfully!"
-                );
-              })
+              .then(() => {})
               .catch((err) => {
                 console.error("Error generating commit message:", err);
                 vscode.window.showErrorMessage(
