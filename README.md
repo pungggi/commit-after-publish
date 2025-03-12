@@ -13,8 +13,9 @@ A VS Code extension that automatically triggers GitHub Copilot to generate a com
 The extension monitors VS Code tasks and when a configured publishing task completes successfully:
 
 1. Waits for a short cooldown period (1 second)
-2. Triggers GitHub Copilot to generate a commit message
-3. Shows a success notification when complete
+2. Opens and focuses the Source Control view
+3. Triggers GitHub Copilot to generate a commit message
+4. Shows a success notification when complete
 
 ## Requirements
 

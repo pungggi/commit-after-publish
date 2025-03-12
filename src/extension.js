@@ -49,9 +49,15 @@ function registerTaskEvents(context) {
         // Success handling - defer slightly to ensure VS Code is ready
         setTimeout(() => {
           try {
-            // Try to generate commit message with GitHub Copilot
+            // Focus Source Control view first
             vscode.commands
-              .executeCommand("github.copilot.git.generateCommitMessage")
+              .executeCommand("workbench.view.scm")
+              .then(() => {
+                // Try to generate commit message with GitHub Copilot
+                return vscode.commands.executeCommand(
+                  "github.copilot.git.generateCommitMessage"
+                );
+              })
               .then(() => {
                 vscode.window.showInformationMessage(
                   "Commit message generated successfully!"
