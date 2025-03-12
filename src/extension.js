@@ -49,13 +49,9 @@ function registerTaskEvents(context) {
         // Success handling - defer slightly to ensure VS Code is ready
         setTimeout(() => {
           try {
-            console.log(
-              "Generating commit message after successful publish..."
-            );
-
             // Try to generate commit message with GitHub Copilot
             vscode.commands
-              .executeCommand("github.copilot.generateCommitMessage")
+              .executeCommand("github.copilot.git.generateCommitMessage")
               .then(() => {
                 vscode.window.showInformationMessage(
                   "Commit message generated successfully!"
