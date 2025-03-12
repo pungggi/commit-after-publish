@@ -41,11 +41,6 @@ This extension contributes the following settings:
 }
 ```
 
-### Settings Explained
-
-- `commit-after-publish.enabled`: Toggle the extension on/off without uninstalling
-- `commit-after-publish.taskNames`: Array of task names that should trigger the commit message generation. The extension checks both task names and npm script names against this list.
-
 ## Usage
 
 1. Configure your publishing tasks in `tasks.json`
